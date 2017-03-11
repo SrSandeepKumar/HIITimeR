@@ -9,13 +9,15 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View,
+  Image
 } from 'react-native';
 import {
   Button
 } from 'react-native-elements';
 import WorkOuts from './src/forms';
 import Actions from './src/actions';
+import bgImage from './src/img/bgImage.jpg';
 
 export default class HIITimeR extends Component {
 
@@ -58,15 +60,19 @@ export default class HIITimeR extends Component {
   }
 
   render() {
-    debugger;
     return (
       <View style={styles.container}>
-        <WorkOuts
-          increase={this.increaseTimer}
-          decrease={this.decreaseTimer}
-          section={this.state.workOutDuration}
-          duration={this.state.totalDuration} />
-        <Actions />
+        <Image source={bgImage} style={styles.backgroundImage}>
+          <View style={styles.container}>
+            <Text> Header </Text>
+          </View>
+          <WorkOuts
+            increase={this.increaseTimer}
+            decrease={this.decreaseTimer}
+            section={this.state.workOutDuration}
+            duration={this.state.totalDuration} />
+          <Actions />
+        </Image>
       </View>
     );
   }
@@ -75,8 +81,13 @@ export default class HIITimeR extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    backgroundColor: '#F5FCFF',
+    flexDirection: 'column'
+  },
+  backgroundImage: {
+    flex: 1,
+    resizeMode: 'cover',
+    width: null,
+    height: null
   },
   workOutContainer: {
     flex: 1

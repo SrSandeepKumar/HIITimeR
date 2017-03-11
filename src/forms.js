@@ -18,6 +18,7 @@ import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 const WorkOuts = ({ duration, increase, decrease, section }) => {
+  debugger;
   return(
     <View style={styles.list}>
       { workOutLists.map((val, index) => {
@@ -45,7 +46,6 @@ const styles = StyleSheet.create({
     flexDirection: 'column'
   },
   listItemContainer: {
-    backgroundColor: '#2aa198',
     borderWidth: 1,
     padding: 10,
     borderColor: 'white',
@@ -59,6 +59,22 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 35,
     fontWeight: 'bold'
+  },
+  gridList: {
+    flex: 1
+  },
+  listItemContainerGrid1: {
+    flex: 0.3,
+    backgroundColor: 'green',
+    padding: 20
+  },
+  listItemContainerGrid2: {
+    flex: 0.3,
+    height: 300,
+    backgroundColor: 'red',
+    padding: 10,
+    margin: 5
+
   }
 });
 
