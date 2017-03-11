@@ -5,7 +5,6 @@ const Actions = () => {
   return (
     <View style={styles.actionsContainer}>
       <Text style={styles.buttons}> START </Text>
-      <Text style={styles.buttons}> STOP </Text>
     </View>
   );
 };
@@ -18,12 +17,12 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'flex-end',
     justifyContent: 'flex-end',
-    backgroundColor: 'red',
+    backgroundColor: '#c74d24',
     margin: 5,
     textAlign: 'center',
     padding: 15,
-    height: 50,
-    fontWeight: '500',
+    height: 60,
+    fontSize: 20,
     color: 'white'
   }
 });

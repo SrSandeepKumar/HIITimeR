@@ -58,6 +58,7 @@ export default class HIITimeR extends Component {
   }
 
   render() {
+    debugger;
     return (
       <View style={styles.container}>
         <WorkOuts
@@ -76,6 +77,9 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     backgroundColor: '#F5FCFF',
+  },
+  workOutContainer: {
+    flex: 1
   }
 });
 
