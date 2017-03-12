@@ -62,17 +62,15 @@ export default class HIITimeR extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Image source={bgImage} style={styles.backgroundImage}>
-          <View style={styles.container}>
-            <Text> Header </Text>
-          </View>
-          <WorkOuts
-            increase={this.increaseTimer}
-            decrease={this.decreaseTimer}
-            section={this.state.workOutDuration}
-            duration={this.state.totalDuration} />
-          <Actions />
-        </Image>
+        <View>
+          <Text> Header </Text>
+        </View>
+        <WorkOuts
+          increase={this.increaseTimer}
+          decrease={this.decreaseTimer}
+          section={this.state.workOutDuration}
+          duration={this.state.totalDuration} />
+        <Actions />
       </View>
     );
   }
