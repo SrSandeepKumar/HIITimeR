@@ -23,7 +23,7 @@ const workOutLists = [
 ];
 
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import prepare from './img/prepare.png';
 import minus from './img/minus.png';
 import plus from './img/plus.png';
@@ -32,9 +32,8 @@ import rest from './img/rest.png';
 import repeat from './img/repeat.png';
 
 const WorkOuts = ({ duration, increase, decrease, section }) => {
-  debugger;
   return(
-    <View style={styles.list}>
+    <ScrollView style={styles.list}>
       { workOutLists.map((val, index) => {
         const type = section[val.title.toLowerCase()] ? section[val.title.toLowerCase()] : { min: 0, sec: 0 };
         debugger;
@@ -55,12 +54,10 @@ const WorkOuts = ({ duration, increase, decrease, section }) => {
                 </View>
               </View>
             </View>
-          </View>
-        );
-      })
+          </View>);
+        })
       }
-
-    </View>
+    </ScrollView>
   );
 }
 
